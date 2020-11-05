@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>My Book List</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+          integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+          crossorigin="anonymous" />
+    <link rel="stylesheet"
+          href="https://bootswatch.com/4/materia/bootstrap.min.css">
+    <style>
+      form {
+        margin-top: 30px;
+        white-space: nowrap;
+      }
+      hr {
+        background-color: black;
+      }
+      label {
+        font-size : 20px;
+        color : black;
+      }
+      input[type = "text"]{
+        font-size : 18px;
+        color : black;
+      }
+      table td {
+        font-size: 20px !important;
+        color : black;
+      }
+      table th {
+        font-size : 22px;
+        color : black;
+      }
+      table {
+        white-space: normal;
+      }
+      input[type = "submit"] {
+        font-size : 27px;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="container mt-10">
+        <h1 class="display-4 text-center">
+          <i class="fas fa-book-open text-primary"></i> My<span class="text-primary">Book</span>List</h1>
+          <hr>
+          <form id="book-form">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" id="title" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="author">Author</label>
+              <input type="text" id="author" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="isbn">#ISBN</label>
+              <input type="text" id="isbn" class="form-control">
+            </div>
+            <input type="submit" value="ADD BOOK" class="btn btn-primary btn-block">
+          </form>
+          <table class="table table-striped mt-5">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>#ISBN</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+          </table>
+      </div>
+
+      <script src="book.js"></script>
+  </body>
+</html>
